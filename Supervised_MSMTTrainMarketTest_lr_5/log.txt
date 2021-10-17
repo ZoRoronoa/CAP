@@ -1,0 +1,20 @@
+log_dir=  Supervised_MSMTTrainMarketTest_lr_5
+args=  Namespace(arch='resnet50', base_lr=0.00035, batch_size=32, data_dir='/data0/ReIDData/', dropout=0.5, epochs=50, evaluate=True, features=2048, height=256, inv_alpha=0.2, inv_beta=0.07, load_ckpt='Supervised_MSMT_logs_lr_5/final_model_epoch_50.pth', logs_dir='Supervised_MSMTTrainMarketTest_lr_5', milestones=[20, 40], momentum=0.9, pool_type='avgpool', print_freq=1, re=0.5, resume='', target='market1501', thresh=0.5, use_bnneck=True, weight_decay=0.0005, width=128, workers=8)
+train image_dir= /data0/ReIDData/market1501/bounding_box_train
+  length of all_img_prefix= 12936
+  12936 samples in total.
+  all cameras shape= (12936,), dtype= int64, unique values= [0 1 2 3 4 5]
+train image_dir= /data0/ReIDData/market1501/bounding_box_train
+  length of all_img_prefix= 12936
+  12936 samples in total.
+  all cameras shape= (12936,), dtype= int64, unique values= [0 1 2 3 4 5]
+DA dataset loaded
+  subset   | # ids | # images
+  ---------------------------
+  target train    | 'Unknown' |    12936
+  query    |   750 |     3368
+  gallery  |   751 |    15913
+  target train(ori)| 'Unknown' |    12936
+  Loading pre-trained model: Supervised_MSMT_logs_lr_5/final_model_epoch_50.pth
+Test:
+rank1: 0.5021, rank5: 0.6888, rank10: 0.7595, rank20: 0.8221, mAP: 0.2449

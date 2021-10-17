@@ -1,0 +1,20 @@
+log_dir=  Supervised_MarketTrainDukeTest_lr_5
+args=  Namespace(arch='resnet50', base_lr=0.00035, batch_size=32, data_dir='/data0/ReIDData/', dropout=0.5, epochs=50, evaluate=True, features=2048, height=256, inv_alpha=0.2, inv_beta=0.07, load_ckpt='Supervised_Market_logs_lr_5/final_model_epoch_50.pth', logs_dir='Supervised_MarketTrainDukeTest_lr_5', milestones=[20, 40], momentum=0.9, pool_type='avgpool', print_freq=1, re=0.5, resume='', target='dukemtmcreid', thresh=0.5, use_bnneck=True, weight_decay=0.0005, width=128, workers=8)
+train image_dir= /data0/ReIDData/dukemtmcreid/bounding_box_train
+  length of all_img_prefix= 16522
+  16522 samples in total.
+  all cameras shape= (16522,), dtype= int64, unique values= [0 1 2 3 4 5 6 7]
+train image_dir= /data0/ReIDData/dukemtmcreid/bounding_box_train
+  length of all_img_prefix= 16522
+  16522 samples in total.
+  all cameras shape= (16522,), dtype= int64, unique values= [0 1 2 3 4 5 6 7]
+DA dataset loaded
+  subset   | # ids | # images
+  ---------------------------
+  target train    | 'Unknown' |    16522
+  query    |   702 |     2228
+  gallery  |  1110 |    17661
+  target train(ori)| 'Unknown' |    16522
+  Loading pre-trained model: Supervised_Market_logs_lr_5/final_model_epoch_50.pth
+Test:
+rank1: 0.3546, rank5: 0.5224, rank10: 0.5875, rank20: 0.6414, mAP: 0.1998
