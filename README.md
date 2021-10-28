@@ -1,2 +1,2 @@
 # CAP
-Camera-Aware based person re-identification
+Camera-Aware proxy person re-identification
